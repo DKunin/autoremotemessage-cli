@@ -1,0 +1,22 @@
+{
+  "name": "autoremotemessagecli",
+  "version": "1.0.0",
+  "description": "Cli for autoremotemessage",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoremotemessage": "git:git@github.com:DKunin/autoremotemessage.git",
+    "nconf": "^0.7.2",
+    "ramda": "^0.17.1",
+    "yargs": "^3.18.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "aurm": "./index.js"
+  }
+}
