@@ -2,9 +2,9 @@
 
 'use strict';
 
-var arnotif              = require('autoremotenotification');
+var armessage            = require('autoremotemessage');
 var argv                 = require('yargs').argv;
-var defaultNotif         = {message: 'Message'};
+var defaultMessage       = {message: 'smth=:=true'};
 var R                    = require('ramda');
 var nconf                = require('nconf');
 var path                 = require('path');
@@ -30,7 +30,7 @@ if(config) {
 }
 
 if(argv.m) {
-  argv.text = argv.m;
+  argv.message = argv.m;
 }
 if(argv.t) {
   argv.title = argv.t;
@@ -39,4 +39,4 @@ if(argv.t) {
 argv.key = apiKey;
 
 
-arnotif(R.merge(defaultNotif, argv));
+armessage(R.merge(defaultMessage, argv));
